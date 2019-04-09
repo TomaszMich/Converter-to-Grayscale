@@ -133,13 +133,13 @@ public class controller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        imageNameColumn.setCellValueFactory( //nazwa pliku
+        imageNameColumn.setCellValueFactory( //file name
                 p -> new SimpleStringProperty(p.getValue().getFile().getName()));
-        statusColumn.setCellValueFactory( //status przetwarzania
+        statusColumn.setCellValueFactory( //progress status
                 p -> p.getValue().messageProperty());
-        progressColumn.setCellFactory( //wykorzystanie paska postępu
+        progressColumn.setCellFactory( //usage of progress bar
                 ProgressBarTableCell.<ImageProcessingJob>forTableColumn());
-        progressColumn.setCellValueFactory( //postęp przetwarzania
+        progressColumn.setCellValueFactory( //progress
                 p -> p.getValue().getProgressProperty().asObject());
         jobs = FXCollections.observableList(new ArrayList<>());
         tableView.setItems(jobs);

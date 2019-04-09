@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 public class imageConverter extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("table.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("GUI.fxml"));
 
         Scene scene = new Scene(root);
         stage.setTitle("Image to grayscale converter");
