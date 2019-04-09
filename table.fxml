@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="510.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller">
+    <TableView fx:id="tableView" prefHeight="347.0" prefWidth="640.0">
+      <columns>
+          <TableColumn fx:id="imageNameColumn" prefWidth="315.199951171875" text="Image" />
+          <TableColumn fx:id="progressColumn" prefWidth="188.00006103515625" text="Progress" />
+          <TableColumn fx:id="statusColumn" prefWidth="135.20001220703125" text="Status" />
+      </columns>
+    </TableView>
+    <AnchorPane fx:id="pane" prefHeight="162.0" prefWidth="640.0">
+        <Button fx:id="selectFilesButton" alignment="CENTER" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#selectFiles" prefHeight="28.0" prefWidth="150.0" text="Select files" textAlignment="CENTER" />
+      <Button fx:id="chooseDirButton" layoutX="244.0" layoutY="4.0" mnemonicParsing="false" onAction="#chooseDir" prefHeight="28.0" prefWidth="150.0" text="Choose Directory" />
+      <Button fx:id="startButton" layoutX="210.0" layoutY="122.0" mnemonicParsing="false" onAction="#processFiles" prefWidth="220.0" text="Start" />
+      <Button fx:id="selectThreads" text="Select threads" onAction="#toggleThreads" layoutX="475.0" layoutY="4.0" prefWidth="150.0" />
+      <Label fx:id="infoLabel" alignment="CENTER" layoutX="136.0" layoutY="52.0" prefHeight="57.0" prefWidth="368.0" text="Select files and choose target directory." />
+    </AnchorPane>
+</VBox>
